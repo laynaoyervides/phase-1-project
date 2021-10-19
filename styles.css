@@ -1,1 +1,112 @@
+body {
+    background-color: #B2FFCA;
+}
+h1 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 50px;
+}
+h2 {
+    font-family: 'Vibur', cursive;
+    text-align: center;
+}
+h3 {
+    font-family: 'Merriweather', serif;
+    color: #fff;
+    padding: 2%;
+    text-align: center;
+}
 
+h4 {
+    padding-left: 2%;
+    color: #fff;
+    font-family: 'Vibur', cursive;
+    font-size: 18px;
+    text-align: center;
+}
+
+p {
+        padding-left: 2%;
+        color: #fff;
+        font-family: 'Merriweather', serif;
+        font-size: 10px;
+        text-align: center;
+}
+img {
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+
+}
+/* IDs*/
+#met-curated {
+    background-color: #597f65;
+    border-radius: 5px; /* 5px rounded corners */
+
+}
+
+#user-saved {
+    background-color: #447f57;
+    border-radius: 5px; /* 5px rounded corners */
+
+}
+#chromata {
+    background-color: #39AA7F;
+    border-radius: 5px; /* 5px rounded corners */
+
+}
+/* Classes */
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:15%;
+    background-color: #8ecca2;
+    padding: 2%;
+    border-radius: 5px; /* 5px rounded corners */
+    margin-top: 1.25%;
+
+}
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 16px 32px 0 rgba(2, 2, 2, 0.2);
+  }
+  
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+    text-align: center;
+  }
+  .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2%;
+  }
+  .saved-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2%;
+}
+.saved-card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:15%;
+    background-color: #8ecca2;
+    padding: 2%;
+    border-radius: 5px; /* 5px rounded corners */
+    margin-top: 1.25%;
+}
+.generate {
+    background-color: beige;
+    font-family: 'Vibur', cursive;
+    border: none;
+    border-radius: 2px; /* 2px rounded corners */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
