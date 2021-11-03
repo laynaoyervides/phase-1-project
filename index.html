@@ -11,27 +11,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Vibur&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="index.js"></script>
+    <script>
+         function allowDrop(ev) {
+            ev.preventDefault();
+            }
+  
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            }
+  
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            }
+    </script>
+    <script type="text/javascript" src="chromata.js"></script>
 
+        
     </head>
 <body>
         <h1>Generative Art and Interpretation</h1>
         <h2>We'll use the Met Museum's open access database and Chromata to compare styles</h2>
      <div id="met-curated">
         <h3> First, examine these artworks from the Met Museum. <br>They've been curated based on their color.</h3>
-        <h4>Select 2-3 images that you like the best by clicking on the image</h4>
+        <h4>Select the image that you like the best by dragging the image to the bottom of the next section</h4>
      <!--card example-->
      <section class="card-container">
-     <!--<div class="card">
-        <img src="images/Green_Durer.jpeg" width="15%">
-           <div class="container">
-            <h4>Title: Head of a Young Woman
-            </h4>
-            <p>Albert Durer, DATE</p>
-          </div>
-          
-      </div>
-    -->
+        <img id="img1" src="images/DT1045.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
+        <img id="img2" src="images/degas_green_dancers.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
+        <img id="img3" src="images/Pisssarro_green.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
+        <img id="img4" src="images/Green_Durer.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
+        <img id="img5" src="images/recon.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
     
     </section>
     </div>
@@ -41,18 +52,18 @@
 <!--Saved Cards-->
 
      <div id="user-saved">
-        <h3>The images you've selected should appear here. </h3>
-        <h4>Choose one to run through the Chromata generator.<br> Note: Only one image will work at a time.</h4>
-        <section class="saved-cards">           
-            <div class="saved-card">
-                <img src="images/ewer.jpeg" width="15%">
-                   <div class="container">
-                    <h4>Title: Ewer
-                    </h4>
-                    <p>Unknown, 19th Century</p>
-                    <button type="button" class="generate">Generate!</button>
+        <h3>The image you've selected should appear below. </h3>
+        <h4>Use the DAIJ Structure to critique the artwork you selected below.</h4>
+        <section class="saved-cards" ondrop="drop(event)" ondragover="allowDrop(event)">           
+      <div id="form">
+    
+            <form id="crit">
+              <label for="critique"><h2>Write Here</h2></label>
+              <input type="text" size="150" placeholder="Describe, Analyze, Interpret, Judge">
+            </form>                
+            <button class="btn" form="crit" type="submit" form="form1" value="Submit">Submit</button>
 
-                  </div>
+        </div>
         <section class="saved-cards">
      </div>
     </div>

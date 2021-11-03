@@ -9,7 +9,7 @@
         {
             "title" : "Dancers, Pink and Green",
             "artist": "Edgar Degas",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/436140",
+            "imgSrc": "https://g.co/arts/VUMxvB5BKkg8iJ778",
             "date": "ca. 1890"
         },
         {
@@ -27,50 +27,8 @@
         {
             "title" : "A Reconnaissance",
             "artist": "Frederic Remington",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/752047",
+            "imgSrc": "https://photos.app.goo.gl/E5AGwHar5cxf9g1t5",
             "date": "1902"
-        },
-        {
-            "title" : "Mask",
-            "artist": "Olmec",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/310279",
-            "date": "900-400 B.C."
-        },
-        {
-            "title" : "Still Life with Apples and Pot of Primroses",
-            "artist": "Paul Cezanne",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/435882",
-            "date": "ca. 1890"
-        },
-        {
-            "title" : "View of Toledo",
-            "artist": "El Greco (Domenikos Theotokopoulos)",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/436575",
-            "date": "ca. 1599-1600"
-        },
-        {
-            "title" : "Hagar in the Wilderness",
-            "artist": "Camille Corot",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/435962",
-            "date": "1835"
-        },
-        {
-            "title" : "Still Life: Balsam Apple and Vegetables",
-            "artist": "James Peale",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/11734",
-            "date": "ca. 1820s"
-        },
-        {
-            "title" : "Wheat Field with Cypresses",
-            "artist": "Vincent van Gogh",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/436535",
-            "date": "1889"
-        },
-        {
-            "title" : "Study of Beeches",
-            "artist": "John Frederick Kensett",
-            "imgSrc": "https://www.metmuseum.org/art/collection/search/11322",
-            "date": "1872"
         }
     ]
 }

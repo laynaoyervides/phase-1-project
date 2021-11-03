@@ -32,16 +32,23 @@ p {
         font-size: 10px;
         text-align: center;
 }
-img {
+input [type=text] {
     width: 100%;
-    border-radius: 5px 5px 5px 5px;
-
+    box-sizing: border-box;
+    resize: both;
 }
+
 /* IDs*/
 #met-curated {
     background-color: #597f65;
     border-radius: 5px; /* 5px rounded corners */
 
+}
+#form{
+    background-color: beige;
+}
+#crit {
+    background-color: beige;
 }
 
 #user-saved {
@@ -54,6 +61,41 @@ img {
     border-radius: 5px; /* 5px rounded corners */
 
 }
+#img1 {
+    width: 15%;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2%;
+
+}
+
+#img2 {
+    width: 15%;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2%;
+
+}
+#img3 {
+    width: 15%;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2%;
+
+}#img4 {
+    width: 15%;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2%;
+
+}
+#img5{
+    width: 15%;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2%;
+
+}
+
+
+
+
+
 /* Classes */
 .card {
     /* Add shadows to create the "card" effect */
@@ -100,7 +142,7 @@ img {
     border-radius: 5px; /* 5px rounded corners */
     margin-top: 1.25%;
 }
-.generate {
+.btn {
     background-color: beige;
     font-family: 'Vibur', cursive;
     border: none;

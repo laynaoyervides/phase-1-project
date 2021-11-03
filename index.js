@@ -1,60 +1,59 @@
-//variables used to find elements from the DOM
-var artCards = document.querySelector('.card-container');
-console.log(artCards);
-var savedCards = document.querySelector('saved-cards');
+const artCards = document.querySelector('.card-container');
+const savedCards = document.querySelector('saved-cards');
+let img = document.getElementsByTagName('img');
+//on page load, get Title and Artist from DB and put them in cards:
 
-//on page load, reset the saved images
-//on page load, get artworks and put them in cards:
-window.addEventListener('DOMContentLoaded', getArtworks())
-//when clicked, save a card to a different container and add a button. 
-//makeDiv.addEventListener('click', copyCard())
+
+window.addEventListener('DOMContentLoaded', getArtworks());
+//img.addEventListener('click', moveImage());
 
 //get function for getting images from db.json
 //function for rending images to a car
 function getArtworks () {
-    return fetch("http://localhost:3000/artworks")
-    .then(res => res.json());
-}
-//function for rendering each artwork card
-getArtworks().then ( artworks => {
+   fetch("http://localhost:3000/artworks")
+    .then(res => res.json())
+    .then ( artworks => {
     artworks.forEach(piece => {
-        renderCard(piece);
+        //function for rendering each artwork card
+renderCard(piece);
+
     })
 });
+}
 
 //function to make each card
 function renderCard(piece) {
 
     let makeDiv = document.createElement('div');
-    makeDiv.setAttribute('class', 'card');
-
-    let img = document.createElement('img');
-    img.setAttribute('src', piece.imgSrc)
-    img.setAttribute('width', '15%');
-
-    //img.addEventListener('click', add to the saved section callback function here )
+        makeDiv.setAttribute('class', 'card');
+      
 
     let newContainer = document.createElement('div');
-    newContainer.setAttribute('class','container');
+        newContainer.setAttribute('class','container');
 
     let h4 = document.createElement('h4');
-    h4.innerText = `Title: ${piece.title}`;
+        h4.innerText = `Title: ${piece.title}`;
 
     let p = document.createElement('p');
-    p.innerText = `Artist: ${piece.artist}`
+        p.innerText = `Artist: ${piece.artist}`
 
-    newContainer.append(h4, p);
-    makeDiv.append(img, newContainer);
+   
+    newContainer.append(h4, p, );
+    makeDiv.append(newContainer);
     artCards.append(makeDiv);
-}
-//the copy card callback function that will be triggered when the card is clicked in the first section
-
-function copyCard (piece){
-    let keepCard = document.createElement('div');
-    keepCard.setAttribute('class', 'saved-card');
     
-    let btn = document.createElement('btn');
-    btn.setAttribute('type', 'button');
-    btn.setAttribute('class', 'generate');
-
 }
+//function moveImage (event) {
+  //  let address = event.target.src;
+   // let img = document.createElement('img');
+   // img.setAttribute(src, address)
+
+    //let btn = document.createElement('button');
+    //btn.setAttribute('class', "generate");
+
+    //savedCards.append(img, btn);
+//}
+
+
+
+    
