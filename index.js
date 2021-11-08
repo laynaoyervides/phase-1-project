@@ -45,28 +45,61 @@ function renderCard(piece) {
     
 }
 function logSubmit(event) {
-    log.textContent = `Thanks! Your critique has been submitted! Time stamp: ${event.timeStamp}`;
+    log.textContent = `Thanks! Your critique has been submitted! Proceed to the next section!`;
     event.preventDefault();;
 }
-//window.onclick = function(event) {
-  //  if (!event.target.innerText.matches('The Singer in Green')) {
-   //  let newImg = document.createElement('img');
-    // newImg.setAttribute('src', 'images/chromata-dancer.png') 
-    // chromImg.append()
-     //   }
-   // else if (!event.target.a.innerText.matches('Dancers, Pink and Green')){}
-    
-    //else if (!event.target.a.innerText.matches('Jalais Hill, Pontoise')){}
+window.onclick = function(event) {
+    console.log(event.target.innerText);
+   
+   if (event.target.innerText === 'The Singer in Green') {
+    let newImg = document.createElement('img');
+    newImg.setAttribute('class', 'gen_img')
+     newImg.setAttribute('src', 'images/chromata-dancer.png') 
+     let original = document.createElement('img');
+     original.setAttribute('class', 'orig');
+     original.setAttribute('src', 'images/DT1045.jpeg')
+    chromImg.append(newImg, original);
+       }
+    else if (event.target.innerText===('Dancers, Pink and Green')){
+        let newImg = document.createElement('img');
+        newImg.setAttribute('class', 'gen_img')
+        newImg.setAttribute('src', 'images/chromata dancers 1.png') 
+        let original = document.createElement('img');
+        original.setAttribute('class', 'orig');
+        original.setAttribute('src', 'images/degas_green_dancers.jpeg')
+       chromImg.append(newImg, original);
+    }
+    else if (event.target.innerText===('Jalais Hill, Pontoise')){ 
+        let newImg = document.createElement('img');
+        newImg.setAttribute('class', 'gen_img')
+        newImg.setAttribute('src', 'images/chromata jalaise.png') 
+        let original = document.createElement('img');
+        original.setAttribute('class', 'orig');
+        original.setAttribute('src', 'images/Pisssarro_green.jpeg')
+       chromImg.append(newImg, original);
+    }
+    else if (event.target.innerText===('Head of a Young Woman')){
+        let newImg = document.createElement('img');
+        newImg.setAttribute('class', 'gen_img')
+        newImg.setAttribute('src', 'images/chromata-durer.png') 
+        let original = document.createElement('img');
+        original.setAttribute('class', 'orig');
+        original.setAttribute('src', 'images/Green_Durer.jpeg')
+       chromImg.append(newImg, original);
+    }
+    else if (event.target.innerText===('A Reconnaissance')){
+        let newImg = document.createElement('img');
+        newImg.setAttribute('class', 'gen_img')
+        newImg.setAttribute('src', 'images/chromata-capture (1).png') 
+        let original = document.createElement('img');
+        original.setAttribute('class', 'orig');
+        original.setAttribute('src', 'images/recon.jpeg')
+       chromImg.append(newImg, original);
+    }
+    else console.log('nope');
+}
 
-    //else if (!event.target.a.innerText.matches('Head of a Young Woman')){}
 
-    //else if (!event.target.a.innerText.matches('A Reconnaissance')){}
-
-  //}
-
-  //function submitCritique () {
-
-//x  }
 
 
 

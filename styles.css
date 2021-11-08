@@ -37,7 +37,9 @@ input [type=text] {
     box-sizing: border-box;
     resize: both;
 }
-
+label {
+    text-align: center;
+}
 /* IDs*/
 #met-curated {
     background-color: #597f65;
@@ -46,16 +48,20 @@ input [type=text] {
 }
 #form{
     background-color: beige;
-    width: 100%;
+    width: 75%;
+    justify-content: center;
+    
 }
 #crit {
     background-color: beige;
-    width: 100%;
+    width: 75%;
+    justify-content: center;
 }
 
 #user-saved {
     background-color: #447f57;
     border-radius: 5px; /* 5px rounded corners */
+    justify-content: center;
 
 }
 #chromata {
@@ -95,6 +101,7 @@ input [type=text] {
 }
 #submitted {
     color: #447f57;
+    font-size: 20px;
 }
 #card-container {
     display: flex;
@@ -112,6 +119,10 @@ input [type=text] {
     border-radius: 5px; /* 5px rounded corners */
     margin-top: 1.25%;
 
+}
+#compare {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -140,8 +151,15 @@ input [type=text] {
   .saved-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 2%;
+}
+.save {
+    padding: 2%;
+    background-color: #8ecca2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .saved-card {
     /* Add shadows to create the "card" effect */
@@ -163,19 +181,28 @@ input [type=text] {
     width: 100%;
 
 }
+.btn2 {
+    background-color: beige;
+    font-family: 'Vibur', cursive;
+    border: none;
+    border-radius: 2px; /* 2px rounded corners */
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
 .dropbtn {
     background-color: #fff;
     color:#8ecca2;
     font-family: 'Vibur', cursive;
-    font-size: 28px;
+    font-size: 48px;
     padding: 16px;
-    font-size: 16px;
+
     border: none;
   }
   
   .dropdown {
-    position: relative;
-    display:block;
+   display:flex;
+   justify-content: center; 
   }
   
   .dropdown-content {
@@ -195,6 +222,23 @@ input [type=text] {
     display: block;
   }
   
+  .gen_img {
+      width: 25%;
+  }
+  .orig {
+    width: 25%;
+
+}
+  .chrom_img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2%;
+  }
+  .chromata-experiment{
+      justify-content: center;
+      display: flex;
+  }
   .dropdown-content a:hover {background-color: #ddd;}
   
   .dropdown:hover .dropdown-content {display: block;}

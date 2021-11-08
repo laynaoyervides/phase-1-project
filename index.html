@@ -34,7 +34,7 @@
         <h2>We'll use the Met Museum's open access database and Chromata to compare styles</h2>
      <div id="met-curated">
         <h3> First, examine these artworks from the Met Museum. <br>They've been curated based on their color.</h3>
-        <h4>Select the image that you like the best by dragging the image to the bottom of the next section</h4>
+        <h4>Select your favorite image and its title card by dragging the them to the next section</h4>
      <!--card example-->
      <section class="images">
         <img id="img1" src="images/DT1045.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
@@ -54,43 +54,52 @@
 <!--Saved Cards-->
 
      <div id="user-saved">
-        <h3>The image you've selected should appear below. </h3>
+        <h3>Drop the artwork and title card below </h3>
+       <section class="save" ondrop="drop(event)" ondragover="allowDrop(event)">
+       </section>
         <h4>Use the DAIJ Structure to critique the artwork you selected below.</h4>
-        <section class="saved-cards" ondrop="drop(event)" ondragover="allowDrop(event)">           
+        <section class="saved-cards">           
       <div id="form">
-    
+
+    <label for="critique"><h2>Write Here</h2></label>
             <form id="crit">
-              <label for="critique"><h2>Write Here</h2></label>
-              <textarea name="form1" type="textarea" rows="20" cols="100" placeholder="Describe, Analyze, Interpret, Judge"></textarea>
+              <textarea name="form1" type="textarea" rows="20" cols="72%" placeholder="Describe, Analyze, Interpret, Judge"></textarea>
             </form>                
             <button class="btn" form="crit" type="submit" name="form1" value="Submit">Submit</button>
             <p id="submitted"></p>
         </div>
-        <section class="saved-cards">
+        </section>
      </div>
     </div>
      <!--Chromata API-->
 <div id="chromata">
-    <h3>This is your image after being run through the Chromata Generator</h3>
+    <h3>Use the dropdown to view your image after being run through the Chromata Generator</h3>
     <!-- Add Dropdown Here-->
 <div class="dropdown">
     <button class="dropbtn">Artworks</button>
     <div class="dropdown-content">
-      <a href="#">The Singer in Green</a>
-      <a href="#">Dancers, Pink and Green</a>
-      <a href="#">Jalais Hill, Pontoise</a>
-      <a href="#">Head of a Young Woman</a>
-      <a href="#">A Reconnaissance</a>
+      <a>The Singer in Green</a>
+      <a>Dancers, Pink and Green</a>
+      <a>Jalais Hill, Pontoise</a>
+      <a>Head of a Young Woman</a>
+      <a>A Reconnaissance</a>
     </div>
   </div>
   <section class="chrom_img">
-      
+
+    
+       
   </section>
     <h4>The Chromata Generator is the invention of Michel Bromley, licensed MIT. <br>
     The settings used were: key:low, lineMode:smooth, lineWidth: 1-2, pathFinderCount: 60, speed:7, turningAngle: pi/2 
 </h4>
     <section class="chromata-experiment">
-        
+        <form id="compare">
+            <textarea name="form1" type="textarea" rows="20" cols="100" placeholder="Compare the generative image with the original! "></textarea>
+          </form>    
+          <br>            
+          <button class="btn2" form="compare" type="submit" name="form1" value="Submit">Finish</button>
+          <p id="compared"></p>
     </section>
 </div>
 <script type="text/javascript" src="index.js"></script>
