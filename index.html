@@ -26,7 +26,6 @@
             ev.target.appendChild(document.getElementById(data));
             }
     </script>
-    <script type="text/javascript" src="chromata.js"></script>
 
         
     </head>
@@ -37,14 +36,17 @@
         <h3> First, examine these artworks from the Met Museum. <br>They've been curated based on their color.</h3>
         <h4>Select the image that you like the best by dragging the image to the bottom of the next section</h4>
      <!--card example-->
-     <section class="card-container">
+     <section class="images">
         <img id="img1" src="images/DT1045.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
         <img id="img2" src="images/degas_green_dancers.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
         <img id="img3" src="images/Pisssarro_green.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
         <img id="img4" src="images/Green_Durer.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
         <img id="img5" src="images/recon.jpeg" width="15%" draggable="true" ondragstart="drag(event)">
-    
     </section>
+    <section id="card-container">
+    </section>
+
+   
     </div>
 
 
@@ -59,18 +61,34 @@
     
             <form id="crit">
               <label for="critique"><h2>Write Here</h2></label>
-              <input type="text" size="150" placeholder="Describe, Analyze, Interpret, Judge">
+              <textarea name="form1" type="textarea" rows="20" cols="100" placeholder="Describe, Analyze, Interpret, Judge"></textarea>
             </form>                
-            <button class="btn" form="crit" type="submit" form="form1" value="Submit">Submit</button>
-
+            <button class="btn" form="crit" type="submit" name="form1" value="Submit">Submit</button>
+            <p id="submitted"></p>
         </div>
         <section class="saved-cards">
      </div>
     </div>
      <!--Chromata API-->
 <div id="chromata">
-    <h3>Your image will be uploaded into the Chromata Generator</h3>
-    <h4>The Chromata Generator is the invention of Michel Bromley, licensed MIT</h4>
+    <h3>This is your image after being run through the Chromata Generator</h3>
+    <!-- Add Dropdown Here-->
+<div class="dropdown">
+    <button class="dropbtn">Artworks</button>
+    <div class="dropdown-content">
+      <a href="#">The Singer in Green</a>
+      <a href="#">Dancers, Pink and Green</a>
+      <a href="#">Jalais Hill, Pontoise</a>
+      <a href="#">Head of a Young Woman</a>
+      <a href="#">A Reconnaissance</a>
+    </div>
+  </div>
+  <section class="chrom_img">
+      
+  </section>
+    <h4>The Chromata Generator is the invention of Michel Bromley, licensed MIT. <br>
+    The settings used were: key:low, lineMode:smooth, lineWidth: 1-2, pathFinderCount: 60, speed:7, turningAngle: pi/2 
+</h4>
     <section class="chromata-experiment">
         
     </section>

@@ -1,33 +1,34 @@
-const artCards = document.querySelector('.card-container');
-const savedCards = document.querySelector('saved-cards');
-let img = document.getElementsByTagName('img');
-//on page load, get Title and Artist from DB and put them in cards:
-
-
+//Global Variables
+const artCards = document.querySelector('#card-container');
+const savedCards = document.querySelector('.saved-cards');
+const chromImg = document.querySelector('.chrom_img');
+//let img = document.getElementsByTagName('img');
+const submitBtn = document.querySelector('.btn');
+const form = document.querySelector('#crit');
+const log = document.querySelector('#submitted');
+//Events
 window.addEventListener('DOMContentLoaded', getArtworks());
-//img.addEventListener('click', moveImage());
+form.addEventListener('submit', logSubmit);
 
-//get function for getting images from db.json
-//function for rending images to a car
+//Fetch from DB
 function getArtworks () {
    fetch("http://localhost:3000/artworks")
     .then(res => res.json())
     .then ( artworks => {
     artworks.forEach(piece => {
-        //function for rendering each artwork card
 renderCard(piece);
 
     })
 });
 }
-
-//function to make each card
+//make Cards
 function renderCard(piece) {
 
     let makeDiv = document.createElement('div');
-        makeDiv.setAttribute('class', 'card');
+        makeDiv.setAttribute('id', 'card');
+        makeDiv.setAttribute('draggable','true');
+        makeDiv.setAttribute('ondragstart','drag(event)');
       
-
     let newContainer = document.createElement('div');
         newContainer.setAttribute('class','container');
 
@@ -43,16 +44,30 @@ function renderCard(piece) {
     artCards.append(makeDiv);
     
 }
-//function moveImage (event) {
-  //  let address = event.target.src;
-   // let img = document.createElement('img');
-   // img.setAttribute(src, address)
+function logSubmit(event) {
+    log.textContent = `Thanks! Your critique has been submitted! Time stamp: ${event.timeStamp}`;
+    event.preventDefault();;
+}
+//window.onclick = function(event) {
+  //  if (!event.target.innerText.matches('The Singer in Green')) {
+   //  let newImg = document.createElement('img');
+    // newImg.setAttribute('src', 'images/chromata-dancer.png') 
+    // chromImg.append()
+     //   }
+   // else if (!event.target.a.innerText.matches('Dancers, Pink and Green')){}
+    
+    //else if (!event.target.a.innerText.matches('Jalais Hill, Pontoise')){}
 
-    //let btn = document.createElement('button');
-    //btn.setAttribute('class', "generate");
+    //else if (!event.target.a.innerText.matches('Head of a Young Woman')){}
 
-    //savedCards.append(img, btn);
-//}
+    //else if (!event.target.a.innerText.matches('A Reconnaissance')){}
+
+  //}
+
+  //function submitCritique () {
+
+//x  }
+
 
 
 
