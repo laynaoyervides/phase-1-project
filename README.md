@@ -3,6 +3,9 @@
 About me: I'm a computer science teacher who studied art; my greatest interests are data visualization, front-end design, and generative art. 
 
 About this project: from Flatiron School Software Engineering course
+--In this project, I used data from the Met Museum's Open Access API and open source image files. I used some of the data in my own json db and loaded it from there. I created a single page application in which a learner can examine several works of art before and after a generative API manipulation. They are able to drag and drop an image of choice to the critique section, where they are prompted to write a short DAIJ critique. Upon Submission, they are informed of its success and prompted to compare and contrast the image with a generated interpretation of the artwork, created with the Chromata API, by Michael Bromley (https://www.michaelbromley.co.uk/experiments/chromata/), under the MIT license. 
+
+Verbatim Project Description:
 
 Learning Goals
 Design and architect features across a frontend
