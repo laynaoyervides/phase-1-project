@@ -11,21 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Vibur&display=swap" rel="stylesheet">
-    <script>
-         function allowDrop(ev) {
-            ev.preventDefault();
-            }
-  
-        function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-            }
-  
-        function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-            }
-    </script>
 
         
     </head>
@@ -103,6 +88,7 @@
     </section>
 </div>
 <script type="text/javascript" src="index.js"></script>
+
     </body>
 
 </html>

@@ -2,13 +2,13 @@
 const artCards = document.querySelector('#card-container');
 const savedCards = document.querySelector('.saved-cards');
 const chromImg = document.querySelector('.chrom_img');
-//let img = document.getElementsByTagName('img');
 const submitBtn = document.querySelector('.btn');
 const form = document.querySelector('#crit');
 const log = document.querySelector('#submitted');
 //Events
 window.addEventListener('DOMContentLoaded', getArtworks());
 form.addEventListener('submit', logSubmit);
+// 2 other events at end
 
 //Fetch from DB
 function getArtworks () {
@@ -16,26 +16,25 @@ function getArtworks () {
     .then(res => res.json())
     .then ( artworks => {
     artworks.forEach(piece => {
-renderCard(piece);
-
+        renderCard(piece);
     })
 });
 }
 //make Cards
 function renderCard(piece) {
 
-    let makeDiv = document.createElement('div');
+    const makeDiv = document.createElement('div');
         makeDiv.setAttribute('id', 'card');
         makeDiv.setAttribute('draggable','true');
         makeDiv.setAttribute('ondragstart','drag(event)');
       
-    let newContainer = document.createElement('div');
+    const newContainer = document.createElement('div');
         newContainer.setAttribute('class','container');
 
-    let h4 = document.createElement('h4');
+    const h4 = document.createElement('h4');
         h4.innerText = `Title: ${piece.title}`;
 
-    let p = document.createElement('p');
+    const p = document.createElement('p');
         p.innerText = `Artist: ${piece.artist}`
 
    
@@ -44,10 +43,14 @@ function renderCard(piece) {
     artCards.append(makeDiv);
     
 }
+
+//event handlers
 function logSubmit(event) {
     log.textContent = `Thanks! Your critique has been submitted! Proceed to the next section!`;
     event.preventDefault();;
 }
+
+// show generative artwork and original from images file event
 window.onclick = function(event) {
     console.log(event.target.innerText);
    
@@ -99,6 +102,20 @@ window.onclick = function(event) {
     else console.log('nope');
 }
 
+//Draggable Events
+function allowDrop(ev) {
+    ev.preventDefault();
+    }
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    }
 
 
 
