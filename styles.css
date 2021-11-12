@@ -124,6 +124,12 @@ label {
     display: flex;
     justify-content: center;
 }
+#compared {
+    color: #447f57;
+    font-size: 20px;
+    background-color: beige;
+
+}
 
 
 

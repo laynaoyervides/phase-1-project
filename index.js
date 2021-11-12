@@ -3,11 +3,16 @@ const artCards = document.querySelector('#card-container');
 const savedCards = document.querySelector('.saved-cards');
 const chromImg = document.querySelector('.chrom_img');
 const submitBtn = document.querySelector('.btn');
+const finishBtn = document.querySelector('.btn2');
 const form = document.querySelector('#crit');
 const log = document.querySelector('#submitted');
+const compare = document.querySelector('#compare');
+const compared = document.querySelector('#compared');
 //Events
 window.addEventListener('DOMContentLoaded', getArtworks());
 form.addEventListener('submit', logSubmit);
+compare.addEventListener('submit', logCompare);
+
 // 2 other events at end
 
 //Fetch from DB
@@ -46,10 +51,13 @@ function renderCard(piece) {
 
 //event handlers
 function logSubmit(event) {
-    log.textContent = `Thanks! Your critique has been submitted! Proceed to the next section!`;
-    event.preventDefault();;
+    log.textContent = `Thanks! Your critique has been submitted. Proceed to the next section!`;
+    event.preventDefault();
 }
-
+function logCompare (event) {
+    compared.textContent = `Thanks! Your comparison has been submitted. You're finished with this assignment`;
+    event.preventDefault();
+}
 // show generative artwork and original from images file event
 window.onclick = function(event) {
     console.log(event.target.innerText);
