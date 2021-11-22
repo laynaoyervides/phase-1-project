@@ -8,10 +8,15 @@ const form = document.querySelector('#crit');
 const log = document.querySelector('#submitted');
 const compare = document.querySelector('#compare');
 const compared = document.querySelector('#compared');
+const critEntry = document.querySelector('#critTxt');
+const comparison = document.querySelector('#comparison'); 
+
 //Events
-window.addEventListener('DOMContentLoaded', getArtworks());
-form.addEventListener('submit', logSubmit);
-compare.addEventListener('submit', logCompare);
+    window.addEventListener('DOMContentLoaded', getArtworks());
+    //Submit Critique
+    form.addEventListener('submit', logSubmit);
+    //Finish Comparison
+    compare.addEventListener('submit', logCompare);
 
 // 2 other events at end
 
@@ -51,24 +56,26 @@ function renderCard(piece) {
 
 //event handlers
 function logSubmit(event) {
-    log.textContent = `Thanks! Your critique has been submitted. Proceed to the next section!`;
+    let critTxt = critEntry.value;
+    log.innerHTML = `Thanks, your critique has been submitted! Here is what you wrote: ${critTxt}`; 
     event.preventDefault();
 }
 function logCompare (event) {
-    compared.textContent = `Thanks! Your comparison has been submitted. You're finished with this assignment`;
+    let comparisonTxt = comparison.value;
+    compared.innerHTML = `Thanks! Your comparison has been submitted. You're finished with this assignment. Here is what you wrote: ${comparisonTxt}`;
     event.preventDefault();
 }
 // show generative artwork and original from images file event
 window.onclick = function(event) {
     console.log(event.target.innerText);
    
-   if (event.target.innerText === 'The Singer in Green') {
+ if (event.target.innerText === 'The Singer in Green') {
     let newImg = document.createElement('img');
     newImg.setAttribute('class', 'gen_img')
-     newImg.setAttribute('src', 'images/chromata-dancer.png') 
-     let original = document.createElement('img');
-     original.setAttribute('class', 'orig');
-     original.setAttribute('src', 'images/DT1045.jpeg')
+    newImg.setAttribute('src', 'images/chromata-dancer.png') 
+    let original = document.createElement('img');
+    original.setAttribute('class', 'orig');
+    original.setAttribute('src', 'images/DT1045.jpeg')
     chromImg.append(newImg, original);
        }
     else if (event.target.innerText===('Dancers, Pink and Green')){
@@ -78,7 +85,7 @@ window.onclick = function(event) {
         let original = document.createElement('img');
         original.setAttribute('class', 'orig');
         original.setAttribute('src', 'images/degas_green_dancers.jpeg')
-       chromImg.append(newImg, original);
+        chromImg.append(newImg, original);
     }
     else if (event.target.innerText===('Jalais Hill, Pontoise')){ 
         let newImg = document.createElement('img');

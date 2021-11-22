@@ -11,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Vibur&display=swap" rel="stylesheet">
-
-        
+ 
     </head>
 <body>
         <h1>Generative Art and Interpretation</h1>
@@ -48,7 +47,7 @@
 
     <label for="critique"><h2>Write Here</h2></label>
             <form id="crit">
-              <textarea name="form1" type="textarea" rows="20" cols="72%" placeholder="Describe, Analyze, Interpret, Judge"></textarea>
+              <textarea id="critTxt" name="form1" type="textarea" rows="20" cols="72%" placeholder="Describe, Analyze, Interpret, Judge"></textarea>
             </form>                
             <button class="btn" form="crit" type="submit" name="form1" value="Submit">Submit</button>
             <p id="submitted"></p>
@@ -80,7 +79,7 @@
 </h4>
     <section class="chromata-experiment">
         <form id="compare">
-            <textarea name="form1" type="textarea" rows="20" cols="100" placeholder="Compare the generative image with the original! "></textarea>
+            <textarea id="comparison" name="form1" type="textarea" rows="20" cols="100" placeholder="Compare the generative image with the original! "></textarea>
           </form>    
           <br>            
           <button class="btn2" form="compare" type="submit" name="form1" value="Submit">Finish</button>
@@ -88,7 +87,9 @@
     </section>
 </div>
 <script type="text/javascript" src="index.js"></script>
-
+<footer>
+  <h3>Copyright 2022 Layna Oyervides</h3>
+</footer>
     </body>
 
 </html>

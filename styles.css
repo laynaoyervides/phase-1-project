@@ -40,6 +40,9 @@ input [type=text] {
 label {
     text-align: center;
 }
+footer {
+    background-color: #8ecca2;
+}
 /* IDs*/
 #met-curated {
     background-color: #597f65;
